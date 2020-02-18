@@ -1,0 +1,69 @@
+$(document).ready(function call() {
+    var deviceID = localStorage.getItem('deviceID');
+    if(deviceID){
+        const database = firebase.database().ref().child('devices').child(localStorage.getItem('deviceID'));
+        database.on('value', snap=>console.log(snap.val()));
+        database.on('value', function(snap){
+            var snapshot = snap.val();
+            console.log(snapshot.address);
+            $('#time').html(snapshot.name);
+        });
+        
+    }
+    else {
+        $('.clock').hide();
+        $('#greeting').hide();
+        $('#center-box').show();
+    }
+
+
+    function load() {
+        var deviceID = localStorage.getItem('deviceID');
+        if(deviceID){
+            const database = firebase.database().ref().child('devices').child(localStorage.getItem('deviceID'));
+            database.on('value', snap=>console.log(snap.val()));
+            database.on('value', function(snap){
+                var snapshot = snap.val();
+                console.log(snapshot.address);
+                $('#time').html(snapshot.name);
+            });
+            
+        }
+        else {
+            $('.clock').hide();
+            $('#greeting').hide();
+            $('#center-box').show();
+        }
+    } // end load
+
+    $('#greeting-form').keypress(function (e) {
+        if (e.which == 13) {
+            e.preventDefault();
+            var newName = $('#greeting-form').val();
+            localStorage.setItem('deviceID', newName);
+            $('#greeting-form').submit();
+            // use `localStorage.clear()` to reset the name 
+            //localStorage.clear();
+            console.log(newName);
+            load();
+        }
+    }); 
+
+    load();
+    
+    /* Prevent Click */
+    $('.slider-clock').click(function (e) {
+        e.stopPropagation();
+    }); 
+
+    // Show/Hide Clock
+    $('#clock-checkbox').change(function () {
+        // e.preventDefault();
+        // e.stopPropagation();
+        if (this.checked) {
+            $('.center-clock').css('opacity', '0');
+        } else $('.center-clock').css('opacity', '5');
+    });
+
+
+}); // end document.ready

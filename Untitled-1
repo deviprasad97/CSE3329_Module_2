@@ -1,0 +1,23 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAXPkOApGHf_R_rwefQabEeKou1b6_7rG4",
+    authDomain: "dashcrib.firebaseapp.com",
+    databaseURL: "https://dashcrib.firebaseio.com",
+    projectId: "dashcrib",
+    storageBucket: "dashcrib.appspot.com",
+    messagingSenderId: "568780866921",
+    appId: "1:568780866921:web:e557206d171f5dd3a729f8",
+    measurementId: "G-RBHKNE98T3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
