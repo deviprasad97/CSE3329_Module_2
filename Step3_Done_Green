@@ -78,6 +78,46 @@
 
 </head>
 <body>
+    
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">//<![CDATA[
+
+    window.onload=function(){
+      
+
+
+    }
+
+  //]]></script>
+
+</head>
+<body>
     <!DOCTYPE html>
 <head>
     <title>Home</title>
@@ -337,7 +377,7 @@
                         Step 3
                     </div>
                     <div class="title-content">
-                        <b>Start Partition Resize</b><br> 
+                        <b><font color="red">Start Partition Resize</font></b><br> 
 On Shrink C: enter a value on space to shrink in MB 
 Hit Shrink to start partition resize.You will see a new unallocated space on the hard drive. 
 Leave it as default and reboot the computer in order to proceed.
@@ -431,3 +471,20 @@ Leave it as default and reboot the computer in order to proceed.
   </script>
 </body>
 </html>
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "Lg76kze8"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+</body>
+</html>
+
